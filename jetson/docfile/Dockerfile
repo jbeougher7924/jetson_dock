@@ -1,0 +1,22 @@
+# Use Nvidia CUDA devel image
+FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
+
+# Install required packages
+RUN apt-get update && apt-get install -y \
+    gcc g++ \
+    build-essential \
+    cmake
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# List the contents of the host's project directory
+RUN ls -la /app
+
+# Copy the contents of the host's project directory into the container
+COPY . /app
+
+# Create a build directory and set it as the working directory
+RUN mkdir -p build
+WORKDIR /app/build
+

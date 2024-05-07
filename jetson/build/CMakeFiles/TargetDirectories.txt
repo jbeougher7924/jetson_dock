@@ -1,0 +1,3 @@
+/mnt/q/src/c++/jetson/build/CMakeFiles/my_executable.dir
+/mnt/q/src/c++/jetson/build/CMakeFiles/edit_cache.dir
+/mnt/q/src/c++/jetson/build/CMakeFiles/rebuild_cache.dir

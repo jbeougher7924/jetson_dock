@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.10)
+project(MyProject)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Directories
+set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
+# Source files
+set(SOURCES
+    ${SOURCE_DIR}/main.cpp
+    # ${SOURCE_DIR}/additional_source.cpp
+)
+
+# Include directories
+include_directories(${INCLUDE_DIR})
+
+# Build executable
+add_executable(my_executable ${SOURCES})
+
+# Optionally, link libraries if needed (e.g., external libraries in lib/)
+# target_link_libraries(my_executable my_library)
+
+# Optionally, specify output directory for built executable
+# set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
